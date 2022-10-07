@@ -5,57 +5,58 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
     </head>
     <body>
-        <form method="POST" action="/api/submit">
-            <div class="input">
-                <label for="name">Full Name</label>
-                <input id="name" name="name" type="text" />
-            </div>
-
-            <div class="input">
-                <label for="email">Email Address</label>
-                <input id="email" name="email" type="email" />
-            </div>
-
-            <div class="input">
-                <label for="referers">How did you hear about us?</label>
-                <select id="referers" name="referers">
-                    <option hidden disabled selected value></option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Twitter">Twitter</option>
-                    <option value="Google">Google</option>
-                    <option value="Bing">Bing</option>
-                    <option value="Friends">Friends</option>
-                </select>
-            </div>
-
-            <div class="checklist">
-                <label>What are your favorite movies?</label>
-                <ul>
-                    <li>
-                        <input id="m1" type="checkbox" name="movies" value="Space Jam" />
-                        <label for="m1">Space Jam</label>
-                    </li>
-                    <li>
-                        <input
-                            id="m2"
-                            type="checkbox"
-                            name="movies"
-                            value="Little Rascals"
-                        />
-                        <label for="m2">Little Rascals</label>
-                    </li>
-                    <li>
-                        <input id="m3" type="checkbox" name="movies" value="Frozen" />
-                        <label for="m3">Frozen</label>
-                    </li>
-                    <li>
-                        <input id="m4" type="checkbox" name="movies" value="Home Alone" />
-                        <label for="m4">Home Alone</label>
-                    </li>
-                </ul>
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
+      <form action="https://airtable-form-handler.jbc343.workers.dev/submit" method="POST">
+        <div>
+          <label for="first_name">First name</label>
+          <input type="text" name="first_name" id="first_name" autocomplete="given-name" placeholder="Ellen" required />
+        </div>
+      
+      
+        <div>
+          <label for="last_name">Last name</label>
+          <input type="text" name="last_name" id="last_name" autocomplete="family-name" placeholder="Ripley" required />
+        </div>
+      
+      
+        <div>
+          <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="eripley@nostromo.com" required />
+          </div>
+        </div>
+      
+      
+        <div>
+          <label for="phone">
+            Phone
+            <span>Optional</span>
+          </label>
+          <input type="text" name="phone" id="phone" autocomplete="tel" placeholder="+1 (123) 456-7890" />
+        </div>
+      
+      
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" placeholder="Your example subject" required />
+        </div>
+      
+      
+        <div>
+          <label for="message">
+            Message
+            <span>Max 500 characters</span>
+          </label>
+          <textarea id="message" name="message" rows="4" placeholder="Tenetur optio quaerat expedita vero et illo. Tenetur nam explicabo dolor voluptatem eveniet. Commodi est beatae id voluptatum porro laudantium. Quam placeat accusamus vel officiis vel. Et perferendis dicta ut perspiciatis quos iste. Tempore autem molestias voluptates in sapiente enim doloremque." required></textarea>
+        </div>
+      
+      
+        <div>
+          <button type="submit">
+            Submit
+          </button>
+        </div>
+      
+      </form>
+      
+          
     </body>
 </html>
